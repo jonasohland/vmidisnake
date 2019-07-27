@@ -1,0 +1,6 @@
+[submodule "lib/JUCE"]
+	path = lib/JUCE
+	url = https://github.com/WeAreRoli/JUCE
+[submodule "cmake/FRUT"]
+	path = cmake/FRUT
+	url = https://github.com/McMartin/FRUT
