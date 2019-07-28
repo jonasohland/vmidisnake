@@ -75,10 +75,11 @@ class MidiPortsTableModel : public TableListBoxModel {
     void duplicateButtonPressed(int);
     
     void createNewPort(String, String);
+    
+    std::function<void(bool)> update;
 
   private:
     std::vector<std::unique_ptr<VMidiPort>> m_ports;
-    std::function<void(bool)> update;
     
 };
 
@@ -94,6 +95,8 @@ public:
     void resized() override;
     
     void do_create();
+    
+    MidiPortsTableModel& tmodel() { return m_tmodel; }
 
 private:
 

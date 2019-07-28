@@ -22,6 +22,8 @@ jucer_project_files( "src"
     .   .   . "${CMAKE_CURRENT_SOURCE_DIR}/src/MainComponent.hpp"
     x   .   . "${CMAKE_CURRENT_SOURCE_DIR}/src/Midi.cpp"
     .   .   . "${CMAKE_CURRENT_SOURCE_DIR}/src/Midi.hpp"
+    x   .   . "${CMAKE_CURRENT_SOURCE_DIR}/src/Files.cpp"
+    .   .   . "${CMAKE_CURRENT_SOURCE_DIR}/src/Files.hpp"
 )
 
 jucer_project_module(
@@ -115,3 +117,7 @@ jucer_export_target_configuration("Xcode (MacOSX)"
 )
 
 jucer_project_end()
+
+find_package(nlohmann_json REQUIRED)
+
+target_link_libraries(vmidisnake PRIVATE nlohmann_json::nlohmann_json)

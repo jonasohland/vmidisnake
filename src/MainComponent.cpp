@@ -235,6 +235,7 @@ MainComponent::MainComponent()
         if (repaint) m_table.repaint();
     })
 {
+    
 
     auto header = new TableHeaderComponent();
 
